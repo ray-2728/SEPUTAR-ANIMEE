@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Seputar Animee</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:black;
+overflow:hidden;
+font-family:Poppins, sans-serif;
+}
+
+/* Video background */
+
+#bgVideo{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* Overlay gelap */
+
+.overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.45);
+}
+
+/* Tulisan tengah */
+
+.welcome{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+color:white;
+text-align:center;
+animation:fadeIn 3s;
+}
+
+/* Judul */
+
+.welcome h1{
+font-size:42px;
+letter-spacing:4px;
+text-shadow:
+0 0 10px #fff,
+0 0 20px #a855f7,
+0 0 40px #7c3aed;
+}
+
+/* Subjudul */
+
+.welcome p{
+margin-top:10px;
+font-size:16px;
+opacity:0.9;
+letter-spacing:2px;
+}
+
+@keyframes fadeIn{
+0%{opacity:0; transform:translate(-50%,-60%);}
+100%{opacity:1; transform:translate(-50%,-50%);}
+}
+
+</style>
+</head>
+
+<body>
+
+<video id="bgVideo" autoplay muted>
+<source src="elaina-loading.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+<div class="welcome">
+<h1>Selamat Datang</h1>
+<p>di Seputar Animee</p>
+</div>
+
+<script>
+
+let video = document.getElementById("bgVideo");
+
+video.onended = function(){
+window.location.href = "https://radiantrayy.blogspot.com/?m=1";
+};
+
+</script>
+
+</body>
+</html>
